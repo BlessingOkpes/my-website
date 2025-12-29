@@ -363,31 +363,33 @@ header nav a {
 }
 
 /* Mobile nav setup */
-@media (max-width: 600px) {
-  nav {
-    display: none; /* hide nav links initially */
+@media (max-width: 900px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide top nav by default */
+  .top-nav {
+    display: none;
     flex-direction: column;
     width: 100%;
     background: #fff;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
-    padding: 10px;
+    padding: 15px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  nav.active {
-    display: flex; /* show nav when active */
-  }
-
-  .menu-toggle {
-    display: block; /* show hamburger on mobile */
-  }
-
-  .top-nav {
-    flex-direction: column;
-    gap:10px; /* spacing between links on mobile */
-    padding: 10px 20px;
     text-align: center;
+  }
+
+  /* Show menu when active */
+  .top-nav.active {
+    display: flex;
+  }
+
+  .top-nav a {
+    padding: 10px 0;
   }
 }
